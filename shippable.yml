@@ -12,4 +12,4 @@ python:
 install: true
 script: true
 after_success:
-  - 'curl -H "Authorization: apiToken $apiToken" -H "Content-Type: application/json" -d "{\"projectId\": \"$projectID\"}" https://apibeta.shippable.com/workflow/triggerBuild'
+  - 'curl -H "Authorization: apiToken $apiToken" -H "Content-Type: application/json" -d "{\"projectId\": \"$projectID\", \"branchName\": \"master\"}" https://apibeta.shippable.com/workflow/triggerBuild'
